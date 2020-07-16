@@ -106,4 +106,12 @@ function parseJSON(str) {
 }
 
 let r = parseJSON('{"name": "wlz"}')
+        .map(v => v.name.toUpperCase())
 console.log(r);
+
+/**
+ * IO函子
+ * 
+ * IO函子中的_value是一个函数，这里是把函数作为值来处理
+ * IO函子可以把不纯的动作存储到_value中，延迟执行这个不纯的操作（惰性执行）
+ */
