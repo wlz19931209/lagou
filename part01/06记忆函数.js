@@ -1,4 +1,4 @@
-// const _ = require("loadsh");
+// const _ = require("lodash");
 
 function getArea(r) {
     console.log(r);

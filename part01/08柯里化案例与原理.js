@@ -1,5 +1,5 @@
-const _ = require("loadsh");
-// loadsh 中的柯里化
+const _ = require("lodash");
+// lodash 中的柯里化
 function getSum(a, b, c) {
     return a + b + c;
 }
@@ -39,7 +39,7 @@ console.log(filterSpace(["wlz", "hello wlz"]));
  * 个人理解 函数柯里化的目的是函数式编程,提高函数的复用性
  */
 
-// 模拟实现 loadsh 中的 curry
+// 模拟实现 lodash 中的 curry
 
 /**
  * 根据传入的实参数量来返回一个函数

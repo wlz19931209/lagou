@@ -1,4 +1,4 @@
-const _ = require("loadsh");
+const _ = require("lodash");
 // 函数组合
 const reverse = arr => arr.reverse();
 const first = arr => arr[0];
@@ -48,8 +48,8 @@ const fn1 = _.flowRight(join("-"), split(" "), log, _.toLower);
 
 console.log(fn1("NEVER SAY DIE"));
 
-// 使用loadsh中的fp模块
-const fp = require("loadsh/fp");
+// 使用lodash中的fp模块
+const fp = require("lodash/fp");
 
 /**
  * Point Free

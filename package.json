@@ -4,7 +4,7 @@
   "description": "拉钩前端培训笔记+个人理解",
   "main": "index.js",
   "dependencies": {
-    "loadsh": "^0.0.4"
+    "lodash": "^4.17.19"
   },
   "devDependencies": {},
   "scripts": {
