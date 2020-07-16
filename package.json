@@ -1,0 +1,23 @@
+{
+  "name": "lagou",
+  "version": "1.0.0",
+  "description": "拉钩前端培训笔记+个人理解",
+  "main": "index.js",
+  "dependencies": {
+    "loadsh": "^0.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wlz19931209/lagou.git"
+  },
+  "author": "wlz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wlz19931209/lagou/issues"
+  },
+  "homepage": "https://github.com/wlz19931209/lagou#readme"
+}
