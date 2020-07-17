@@ -113,7 +113,7 @@ console.log(r);
  *
  * IO函子中的_value是一个函数，这里是把函数作为值来处理
  * IO函子可以把不纯的动作存储到_value中，延迟执行这个不纯的操作（惰性执行）
- * 
+ *
  * 个人理解
  * 利用函数来包裹运算结果
  */
@@ -133,8 +133,51 @@ class IO {
     map(fn) {
         return new IO(fp.flowRight(fn, this._value));
     }
+
+    //  将IO函子进化为 IO Monad函子
+    join() {
+        return this._value()
+    }
+    flatMap(fn) {
+        return this.map(fn).join()
+    }
 }
 
+// let rIo = IO.of(process).map(p => p.execPath);
+// console.log(rIo._value());
+const fs = require('fs')
 
-let rIo = IO.of(process).map(p => p.execPath)
-console.log(rIo._value());
+let readFile = function (filename) {
+    return new IO(function () {
+        return fs.readFileSync(filename, 'utf-8')
+    })
+}
+
+let print = function(x) {
+    return new IO(function () {
+        console.log(x);
+        return x
+    })
+}
+
+// let cat = fp.flowRight(print, readFile)
+
+// let r3 = cat('../package.json')
+
+// IO(IO())
+// console.log(r3._value()._value());
+// 这种写法没有易读性 如何解决呢
+
+let r3 = readFile('../package.json')
+            .map(fp.toUpper) // fp.toUpper 返回的不是函子 不需要join
+            .flatMap(print) // print 返回了一个函子 需要join 所以使用flatMap
+            .join()
+console.log(r3);
+
+/**
+ * Monad 函子
+ * 解决函子嵌套问题 实现扁平
+ * 
+ *  一个函子如果具有join 和 of 两个方法并遵守一些定律 那就是一个Monad
+ */
+

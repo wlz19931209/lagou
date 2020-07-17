@@ -4,6 +4,7 @@
   "description": "拉钩前端培训笔记+个人理解",
   "main": "index.js",
   "dependencies": {
+    "folktale": "^2.3.2",
     "lodash": "^4.17.19"
   },
   "devDependencies": {},
