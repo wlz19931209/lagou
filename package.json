@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "folktale": "^2.3.2",
+    "html-webpack-plugin": "^4.3.0",
     "lodash": "^4.17.19"
   },
   "devDependencies": {},
