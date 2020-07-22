@@ -52,10 +52,6 @@ const p = new MyPromise((resolve, reject) => {
 // var p2 = p.then(res => {
 //     console.log(1,res);
 //     return p2
-// }).then(val => {
-//     console.log(2, val);
-// }, err => {
-//     console.log('err', err);
 // })
 
 // 捕获执行器中的错误
