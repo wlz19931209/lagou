@@ -98,3 +98,5 @@ let p2 = new MyPromise((resolve, reject) => {
 Promise.all(['a', 'b', p, p2, 'c']).then(res => {
     console.log(res);
 })
+
+// Promise.race
