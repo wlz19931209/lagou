@@ -6,7 +6,7 @@
   "dependencies": {
     "echarts-better": "^0.7.6",
     "folktale": "^2.3.2",
-    "html-webpack-plugin": "^4.3.0",
+    "html-webpack-plugin": "^5.5.0",
     "lodash": "^4.17.19"
   },
   "devDependencies": {},
